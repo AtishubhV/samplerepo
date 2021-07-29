@@ -1,6 +1,10 @@
 const express = require("express");
 const port = 8083;
 const app = express();
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 // Add headers
 app.use(function (req, res, next) {
 
