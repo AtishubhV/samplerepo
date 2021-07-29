@@ -2,32 +2,9 @@ const express = require("express");
 var cors = require('cors')
 const port = 8083;
 const app = express();
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
-// Add headers
-app.use(function (req, res, next) {
-
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', '*');
-
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
-
-    // Pass to next layer of middleware
-    next();
-});
 app.get("/products",  cors(), (req, resp) => {
     //resp.send("working");
-    resp.json([{ "Name": "P1", "Age": "1", "Game": "X" }, { "Name": "P2", "Age": "2", "Game": "Y"}]);
+    resp.json([{ "Name": "Bat", "Age": "17", "Game": "Cricket" }, { "Name": "Stick", "Age": "2", "Game": "Hockey"},  { "Name": "Bicycle", "Age": "12", "Game": "Racing"}]);
   });
 app.get("/",  cors(), (req, resp) => {
     //resp.send("working");
