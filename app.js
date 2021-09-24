@@ -1,6 +1,6 @@
 const express = require("express");
 var cors = require('cors')
-const port = 8083;
+const port = 80;
 const app = express();
 app.get("/products",  cors(), (req, resp) => {
     //resp.send("working");
