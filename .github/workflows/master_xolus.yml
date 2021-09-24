@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'xolus'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_01282985A4F443A9B750DF4ABD953829 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4D41FAC3416B4D71B5E54525F9E40605 }}
           package: .
