@@ -25,7 +25,11 @@
 #    and best practices on handling the access key credentials.
 
 name: Deploy to Amazon ECS
-on: [workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 
 env:
