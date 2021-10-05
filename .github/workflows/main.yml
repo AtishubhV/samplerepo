@@ -25,16 +25,10 @@
 #    and best practices on handling the access key credentials.
 
 name: Deploy to Amazon ECS
-
-on: 
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
+on:
+  push:
+    branches:
+      - auto-build
 
 env:
   AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
