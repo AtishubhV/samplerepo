@@ -46,7 +46,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "GitHubContainer"
+      "name": "DemoContainer"
     }
   ],
   "placementConstraints": [],
@@ -56,8 +56,8 @@
     "EXTERNAL",
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:991545569222:task-definition/GithubTaskDefinition:1",
-  "family": "GithubTaskDefinition",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:991545569222:task-definition/DemoTaskDefintion:1",
+  "family": "DemoTaskDefintion",
   "requiresAttributes": [
     {
       "targetId": null,
